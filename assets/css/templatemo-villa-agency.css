@@ -851,6 +851,17 @@ Banner Style
   background-position: center;
   background-repeat: no-repeat;
 }
+.banner-section2{
+  display: flex;
+  justify-content: start; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  text-align: start; /* Centers text within the content box */
+  width: 100%;
+  height: 100vh; /* Ensures full viewport height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .banner-section::after {
   content: ''; /* Required for pseudo-element */
   position: absolute;
@@ -1255,6 +1266,81 @@ Best Deal Style
   position: relative;
   overflow: hidden;
   height: 100vh; /* Set the height as needed */
+}
+.banner-section2 {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Set the height as needed */
+}
+.sticky-button {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  display: none; /* Hidden by default */
+  z-index: 1000; /* Ensure it's above other content */
+}
+.sticky-button a {
+  display: inline-block;
+  background-color: #1e1e1e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  height: 50px;
+  line-height: 50px;
+  padding: 0px 30px 0px 0px;
+  border-radius: 25px;
+  transition: all .3s;
+}
+.video-banner {
+  position: relative;
+  overflow: hidden;
+  height: 60vh; /* Adjust height as needed */
+}
+
+
+
+.video-container {
+  width: 100%;
+  height: 100%;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%; /* Ensures the video covers the container */
+  object-fit: cover; /* Keeps aspect ratio */
+}
+.sticky-button a i {
+  background-color: #f35525;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 50px;
+  display: inline-block;
+  margin-right: 15px;
+  margin-left: -1px;
+}
+
+.sticky-button a:hover {
+  color: #f35525;
+}
+
+.sticky-button a:hover i {
+  color: #fff;
+}
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.product-card:hover {
+  transform: scale(1.05);
+}
+.product-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
 }
 
 .background-video {
@@ -1859,6 +1945,9 @@ body {
   }
   .header-text3{
     margin-left: 0;
+  }
+  .sticky-button {
+    display: block;
   }
   .banner-section  span.category{
     margin-left: 0;
