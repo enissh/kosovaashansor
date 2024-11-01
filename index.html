@@ -93,26 +93,21 @@
 
 
   <div class="banner-section">
-    <div class="background-video">
-      <video autoplay muted loop>
-        <source src="assets/images/video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
+    <div class="background-image"></div>
     <div class="text-overlay">
       <span class="category">Ferizaj, <em>Kosovo</em></span>
-      <h2>Kosova Ashansor Group SH.P.K. - Distributor i Ashensorëve</h2>
+      <h2 class="main-header">Kosova Ashansor Group SH.P.K. - Distributor i Ashensorëve</h2>
     </div>
   </div>
   <div class="sticky-button">
     <a href="tel:+37744219150"><i class="fa fa-phone"></i> +377 44 219 150</a>
   </div>
-  <div class="featured section">
+  <div class="featured section mb-5">
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
           <div class="left-image">
-            <img src="assets/images/index-img1.PNG" alt="">
+            <img src="assets/images/main-photo1.png" alt="">
             <a href="property-details.html"><img src="assets/images/featured-icon.png" alt="" style="max-width: 60px; padding: 0px;"></a>
           </div>
         </div>
@@ -181,6 +176,20 @@
     </div>
   </div>
 
+  <section class="container my-5 mt-5">
+    <div class="position-relative mt-5">
+        <!-- Placeholder Image and Play Button -->
+        <img src="assets/images/background1.PNG" alt="Video Thumbnail" class="img-fluid w-100" id="video-placeholder">
+        <button class="btn play-button" id="play-button">▶</button>
+        
+        <!-- Video -->
+        <video id="video" class="w-100 d-none" muted loop playsinline controls >
+            <source src="assets/images/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
   <div class="video section">
     <div class="container">
       <div class="row">
@@ -188,7 +197,7 @@
           <div class="section-heading text-center">
             <h6>| Kontaktoni me Ne |</h6>
             <h2>Thirrni Tani!</h2>
-            <div class="icon-button">
+            <div class="icon-button mt-5">
               <a href="tel:+37744219150"><i class="fa fa-phone"></i> +377 44 219 150</a>
             </div>       
           </div>
@@ -579,6 +588,15 @@
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
+<script>document.getElementById("play-button").addEventListener("click", function() {
+  const video = document.getElementById("video");
+  const placeholder = document.getElementById("video-placeholder");
+  const playButton = document.getElementById("play-button");
 
+  placeholder.classList.add("d-none");
+  playButton.classList.add("d-none");
+  video.classList.remove("d-none");
+  video.play();
+});</script>
   </body>
 </html>
